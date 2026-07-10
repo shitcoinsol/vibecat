@@ -1,0 +1,553 @@
+:root {
+  --cream: #f3ead2;
+  --cream-2: #fff6df;
+  --ink: #10110d;
+  --muted: #766b58;
+  --green: #00e868;
+  --green-2: #00b856;
+  --soft-green: #d9ffd8;
+  --line: rgba(16, 17, 13, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  font-family: "Geist", Inter, system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(16, 17, 13, 0.035) 1px, transparent 1px) 0 0 / 46px 46px,
+    linear-gradient(0deg, rgba(16, 17, 13, 0.032) 1px, transparent 1px) 0 0 / 46px 46px,
+    var(--cream);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: center;
+  min-height: 72px;
+  padding: 14px clamp(18px, 4vw, 54px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(251, 241, 216, 0.9);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Geist", Inter, system-ui, sans-serif;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+.brand-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  overflow: hidden;
+  border: 2px solid var(--green-2);
+  border-radius: 8px;
+  background: var(--cream-2);
+  box-shadow: none;
+  transform: rotate(3deg);
+}
+
+.brand-icon img {
+  width: 130%;
+  height: 130%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 36% 50%;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  font-family: "Gaegu", "IBM Plex Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.header-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--cream-2);
+  transform: rotate(1deg);
+}
+
+.header-actions a:first-child {
+  background: var(--green);
+  transform: rotate(-1deg);
+}
+
+.header-actions a:hover {
+  background: var(--soft-green);
+}
+
+.hero {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(36px, 6vw, 72px) clamp(18px, 4vw, 54px) clamp(52px, 7vw, 86px);
+}
+
+.chain-label,
+.section-kicker,
+.final-section > p {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 5px 10px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--cream-2);
+  color: var(--ink);
+  font-family: "Gaegu", "Geist", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: lowercase;
+  transform: rotate(-1deg);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 22px;
+  font-family: "Gaegu", "Geist", sans-serif;
+  font-size: clamp(92px, 15vw, 180px);
+  font-weight: 700;
+  line-height: 0.78;
+  letter-spacing: 0;
+  transform: rotate(-1.5deg);
+  text-shadow: none;
+}
+
+h2 {
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Gaegu", "Geist", sans-serif;
+  font-size: clamp(52px, 8vw, 100px);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  text-wrap: balance;
+  transform: rotate(-0.8deg);
+}
+
+h2::after {
+  display: block;
+  width: min(72%, 420px);
+  height: 10px;
+  margin: 18px auto 0;
+  border-top: 3px solid var(--ink);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(1deg);
+}
+
+.cat-stage {
+  position: relative;
+  width: min(72vw, 430px);
+  margin: 0 auto 24px;
+  transform: rotate(1.2deg);
+}
+
+.cat-orb {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 3px solid var(--green-2);
+  border-radius: 50%;
+  background: var(--cream-2);
+  box-shadow: none;
+}
+
+.cat-orb img {
+  width: 118%;
+  height: 118%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 38% 50%;
+  transform: none;
+}
+
+.sticker {
+  position: absolute;
+  z-index: 2;
+  left: -22px;
+  top: 34px;
+  transform: rotate(-9deg);
+  padding: 10px 13px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--cream-2);
+  box-shadow: none;
+  font-family: "Gaegu", "IBM Plex Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-text {
+  max-width: 760px;
+  margin: 0 auto 24px;
+  color: #372f22;
+  font-family: "Gaegu", "Geist", sans-serif;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.18;
+  font-weight: 700;
+  transform: rotate(0.4deg);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero-contract {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  width: min(100%, 760px);
+  margin-top: 18px;
+  padding: 10px 12px;
+  border: 2px solid rgba(16, 17, 13, 0.72);
+  border-radius: 8px;
+  background: var(--cream-2);
+  text-align: left;
+  transform: none;
+}
+
+.hero-contract span,
+.hero-contract code {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hero-contract code {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mini-copy {
+  min-height: 32px;
+  padding: 0 10px;
+}
+
+.button,
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  background: var(--cream-2);
+  color: var(--ink);
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.hero-actions .button:first-child {
+  transform: rotate(-1.5deg);
+}
+
+.hero-actions .button:last-child {
+  transform: rotate(1.2deg);
+}
+
+.button.primary {
+  background: var(--green);
+}
+
+.button:hover,
+.copy-btn:hover {
+  transform: translateY(-2px) rotate(0deg);
+  box-shadow: none;
+}
+
+.button svg,
+.copy-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.35;
+}
+
+.lore-section,
+.tweet-section,
+.token-section,
+.final-section {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: clamp(58px, 8vw, 110px) clamp(18px, 4vw, 54px);
+  border-top: 3px dashed rgba(16, 17, 13, 0.22);
+}
+
+.lore-section {
+  background: var(--cream-2);
+}
+
+.lore-section p:not(.section-kicker) {
+  max-width: 840px;
+  margin: 22px auto 0;
+  color: #3a3124;
+  font-family: "Gaegu", "Geist", sans-serif;
+  font-size: clamp(24px, 2.7vw, 34px);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.lore-section p:nth-of-type(2) {
+  transform: rotate(-0.7deg);
+}
+
+.lore-section p:nth-of-type(3) {
+  transform: rotate(0.8deg);
+}
+
+.lore-section strong {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 14px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--soft-green);
+  font-family: "Gaegu", "IBM Plex Mono", monospace;
+  font-size: 19px;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+.tweet-section {
+  background: var(--ink);
+  color: var(--cream);
+  border-top-color: rgba(251, 241, 216, 0.3);
+}
+
+.tweet-section .section-kicker {
+  color: var(--ink);
+  background: var(--green);
+}
+
+.tweet-section h2::after {
+  border-color: var(--green);
+}
+
+.token-section h2::after {
+  border-color: var(--ink);
+}
+
+.tweet-wrap {
+  width: min(100%, 560px);
+  margin-top: 30px;
+}
+
+.twitter-tweet {
+  margin: 0 auto !important;
+}
+
+.twitter-tweet iframe {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.token-section {
+  background: var(--green);
+}
+
+.token-section .section-kicker {
+  color: var(--ink);
+  background: var(--cream-2);
+}
+
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  width: min(100%, 860px);
+  margin-top: 26px;
+}
+
+.tokenomics-grid article {
+  min-height: 230px;
+  padding: 22px;
+  border: 2px solid rgba(16, 17, 13, 0.72);
+  border-radius: 8px;
+  background: var(--cream-2);
+  text-align: left;
+}
+
+.tokenomics-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Gaegu", "Geist", sans-serif;
+  font-size: clamp(58px, 7vw, 86px);
+  line-height: 0.85;
+}
+
+.tokenomics-grid span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tokenomics-grid p {
+  margin: 0;
+  font-family: "Gaegu", "Geist", sans-serif;
+  font-size: 25px;
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+.final-section img {
+  width: min(66vw, 220px);
+  margin-bottom: 18px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  transform: rotate(3deg);
+}
+
+.final-section p:last-child {
+  max-width: 680px;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Gaegu", "Geist", sans-serif;
+  font-size: clamp(56px, 8vw, 96px);
+  font-weight: 700;
+  line-height: 0.92;
+  text-transform: lowercase;
+  transform: rotate(-1deg);
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px clamp(18px, 4vw, 54px);
+  border-top: 2px solid var(--ink);
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+}
+
+.toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 40;
+  transform: translateY(14px);
+  opacity: 0;
+  pointer-events: none;
+  padding: 12px 14px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--ink);
+  font-weight: 900;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.toast.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    position: relative;
+    grid-template-columns: 1fr;
+  }
+
+  .header-actions {
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: clamp(86px, 26vw, 128px);
+  }
+
+  .cat-stage {
+    width: min(82vw, 340px);
+  }
+
+  .sticker {
+    left: -8px;
+    top: 18px;
+    font-size: 10px;
+  }
+
+  .hero-actions,
+  .button {
+    width: 100%;
+  }
+
+  .hero-contract {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .tokenomics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+}
