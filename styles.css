@@ -117,8 +117,16 @@ img {
   transform: rotate(-1deg);
 }
 
+.header-actions a:nth-child(3) {
+  min-width: 42px;
+  background: var(--ink);
+  color: var(--cream-2);
+  transform: rotate(-0.5deg);
+}
+
 .header-actions a:hover {
   background: var(--soft-green);
+  color: var(--ink);
 }
 
 .hero {
@@ -310,6 +318,22 @@ h2::after {
 
 .button.primary {
   background: var(--green);
+}
+
+.x-button {
+  background: var(--ink);
+  color: var(--cream-2);
+}
+
+.x-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  font-family: "Geist", Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .button:hover,
