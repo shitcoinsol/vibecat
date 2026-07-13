@@ -30,6 +30,7 @@ if (loader) {
   }, 420);
 
   window.setTimeout(() => {
+    document.body.classList.remove("is-preloading");
     loader.classList.add("is-done");
   }, 2850);
 
