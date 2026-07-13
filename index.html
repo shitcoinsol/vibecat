@@ -4,131 +4,296 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>VIBE CAT</title>
-    <meta name="description" content="VIBE CAT on Robinhood Chain. The green-chart cat meme with a ticker." />
+    <meta name="description" content="VIBE CAT on Robinhood Chain. The market's white vibing cat, live on-chain." />
     <meta property="og:title" content="VIBE CAT" />
-    <meta property="og:description" content="The green-chart cat meme on Robinhood Chain." />
+    <meta property="og:description" content="The market's white vibing cat, live on-chain." />
     <meta property="og:image" content="assets/vibegif.gif" />
-    <link rel="icon" type="image/gif" href="assets/favicon-vibecat-transparent.gif?v=2" />
-    <link rel="shortcut icon" type="image/gif" href="assets/favicon-vibecat-transparent.gif?v=2" />
+    <link rel="icon" type="image/gif" href="assets/favicon-vibecat-transparent.gif?v=3" />
+    <link rel="shortcut icon" type="image/gif" href="assets/favicon-vibecat-transparent.gif?v=3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Geist:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="loader" aria-label="Loading VIBE CAT">
+      <div class="loader-card">
+        <img src="assets/vibegif.gif" alt="" decoding="async" />
+        <div>
+          <span>loading the vibe</span>
+          <strong>VIBE CAT</strong>
+        </div>
+        <div class="loader-bar"><span></span></div>
+      </div>
+    </div>
+
+    <div class="ambient" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <header class="site-header">
       <a class="brand" href="#top" aria-label="VIBE CAT home">
-        <span class="brand-icon"><img src="assets/vibegif.gif" alt="" /></span>
-        <span>$VIBE CAT</span>
+        <span class="brand-mark"><img src="assets/vibegif.gif" alt="" decoding="async" /></span>
+        <span class="brand-word">$VIBE CAT</span>
       </a>
       <nav class="header-actions" aria-label="Main actions">
-        <a href="https://app.uniswap.org/swap?outputCurrency=0x2355431b83b1a8e40172d099d90243d8d666b56b&chain=robinhood" target="_blank" rel="noreferrer">buy</a>
-        <a href="https://dexscreener.com/robinhood/0x2355431b83b1a8e40172d099d90243d8d666b56b" target="_blank" rel="noreferrer">chart</a>
-        <a href="https://x.com/vibecat_rh" target="_blank" rel="noreferrer">x</a>
-        <a href="https://x.com/i/communities/1870217988248613079" target="_blank" rel="noreferrer">community</a>
+        <a class="nav-item header-buy" href="https://app.uniswap.org/swap?outputCurrency=0x2355431b83b1a8e40172d099d90243d8d666b56b&chain=robinhood" target="_blank" rel="noreferrer"><span>Buy</span></a>
+        <a class="nav-item" href="https://x.com/vibecat_rh" target="_blank" rel="noreferrer"><span>Official X</span></a>
+        <a class="nav-item" href="https://dexscreener.com/robinhood/0x2355431b83b1a8e40172d099d90243d8d666b56b" target="_blank" rel="noreferrer"><span>Chart</span></a>
+        <a class="nav-item" href="https://x.com/i/communities/1870217988248613079" target="_blank" rel="noreferrer"><span>Community</span></a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <p class="chain-label">robinhood chain</p>
-        <h1>VIBE CAT</h1>
-        <div class="cat-stage" aria-label="VIBE CAT stage">
-          <span class="sticker sticker-left">good vibes only</span>
-          <div class="cat-orb">
-            <img src="assets/vibegif.gif" alt="VIBE CAT green chart gif" />
+      <section class="hero section-reveal">
+        <div class="hero-copy">
+          <p class="micro">Robinhood Chain</p>
+          <h1><span>VIBE</span><span>CAT</span></h1>
+          <p class="hero-text">One of Robinhood founder Vlad's favorite cat memes.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://app.uniswap.org/swap?outputCurrency=0x2355431b83b1a8e40172d099d90243d8d666b56b&chain=robinhood" target="_blank" rel="noreferrer">
+              <i data-lucide="sparkles"></i>
+              Buy VIBE CAT
+            </a>
+            <a class="button button-x" href="https://x.com/vibecat_rh" target="_blank" rel="noreferrer">
+              <span class="x-glyph">X</span>
+              Official X
+            </a>
+            <a class="button" href="#live">
+              <i data-lucide="activity"></i>
+              Live market
+            </a>
           </div>
         </div>
-        <p class="hero-text">
-          A viral vibing cat meme used across crypto, stocks, and positive market posts for years.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="https://app.uniswap.org/swap?outputCurrency=0x2355431b83b1a8e40172d099d90243d8d666b56b&chain=robinhood" target="_blank" rel="noreferrer">
-            <i data-lucide="shopping-bag"></i>
-            buy $VIBE CAT
-          </a>
-          <a class="button" href="https://dexscreener.com/robinhood/0x2355431b83b1a8e40172d099d90243d8d666b56b" target="_blank" rel="noreferrer">
-            <i data-lucide="line-chart"></i>
-            view chart
-          </a>
-          <a class="button x-button" href="https://x.com/vibecat_rh" target="_blank" rel="noreferrer">
-            <span class="x-mark">X</span>
-            follow x
-          </a>
-          <a class="button" href="https://x.com/i/communities/1870217988248613079" target="_blank" rel="noreferrer">
-            <i data-lucide="users"></i>
-            community
-          </a>
+
+        <div class="hero-stage" data-tilt>
+          <figure class="cat-orb">
+            <img src="assets/vibegif.gif" alt="VIBE CAT vibing in front of green charts" decoding="async" />
+          </figure>
         </div>
-        <div class="hero-contract">
-          <span>CA</span>
+
+        <div class="contract-strip">
+          <span>Contract</span>
           <code>0x2355431b83b1a8e40172d099d90243d8d666b56b</code>
-          <button class="copy-btn mini-copy" type="button" data-copy="0x2355431b83b1a8e40172d099d90243d8d666b56b">
+          <button type="button" class="copy-btn" data-copy="0x2355431b83b1a8e40172d099d90243d8d666b56b">
             <i data-lucide="copy"></i>
+            Copy
           </button>
         </div>
       </section>
 
-      <section class="lore-section" id="lore">
-        <p class="section-kicker">why it vibes</p>
-        <h2>green charts. positive vibes. robinhood green.</h2>
-        <p>
-          VIBE CAT is the familiar vibing cat in front of green charts, already used as a market reaction across crypto, stocks, and timeline optimism.
-        </p>
-        <p>
-          Vlad Tenev, founder of Robinhood, has shared the cat before. The chain, the color, and the meme all point in the same direction.
-        </p>
-        <strong>No roadmap. Just PVE: positive vibe entity.</strong>
-      </section>
-
-      <section class="tweet-section" id="tweet">
-        <p class="section-kicker">vlad receipt</p>
-        <h2>the founder posted the cat.</h2>
-        <div class="tweet-wrap">
-          <blockquote class="twitter-tweet" data-theme="light" data-chrome="noheader nofooter noborders transparent" data-dnt="true">
-            <a href="https://x.com/vladtenev/status/1376953495194984450"></a>
-          </blockquote>
+      <section class="story-section section-reveal">
+        <div class="story-copy">
+          <div class="section-kicker">Lore</div>
+          <h2>the receipts.</h2>
+          <p>Vlad used it. Robinhood Crypto Manager used it. The meme already belongs here.</p>
+        </div>
+        <div class="tweet-panel" aria-label="VIBE CAT lore receipts">
+          <a class="tweet-card x-post-card" href="https://x.com/vladtenev/status/1382086982759821316" target="_blank" rel="noreferrer">
+            <div class="x-post-head">
+              <img class="x-avatar" src="https://pbs.twimg.com/profile_images/1762952134231040000/XvKRGoWY_200x200.jpg" alt="" loading="lazy" decoding="async" />
+              <div>
+                <strong>Vlad Tenev <span class="verified-mark" aria-label="Verified">✓</span><img class="affiliate-badge" src="https://pbs.twimg.com/profile_images/1844399977482813442/1fTlYz2c_200x200.png" alt="Robinhood affiliate badge" loading="lazy" decoding="async" /></strong>
+                <span>@vladtenev</span>
+              </div>
+              <span class="x-menu">...</span>
+            </div>
+            <div class="x-media">
+              <video src="https://video.twimg.com/ext_tw_video/1382086220742864896/pu/vid/640x360/8M6mFCNS3nZ-Auyi.mp4?tag=12" poster="https://pbs.twimg.com/ext_tw_video_thumb/1382086220742864896/pu/img/JOybkggBY_k5Cx4k.jpg" autoplay loop muted playsinline></video>
+            </div>
+            <div class="x-meta">9:43 PM · Apr 13, 2021</div>
+            <div class="x-actions"><span>181</span><span>202</span><span>1.2K</span><span>67</span></div>
+          </a>
+          <a class="tweet-card x-post-card" href="https://x.com/vladtenev/status/1376953495194984450" target="_blank" rel="noreferrer">
+            <div class="x-post-head">
+              <img class="x-avatar" src="https://pbs.twimg.com/profile_images/1762952134231040000/XvKRGoWY_200x200.jpg" alt="" loading="lazy" decoding="async" />
+              <div>
+                <strong>Vlad Tenev <span class="verified-mark" aria-label="Verified">✓</span><img class="affiliate-badge" src="https://pbs.twimg.com/profile_images/1844399977482813442/1fTlYz2c_200x200.png" alt="Robinhood affiliate badge" loading="lazy" decoding="async" /></strong>
+                <span>@vladtenev</span>
+              </div>
+              <span class="x-menu">...</span>
+            </div>
+            <p>When crypto becomes culturally relevant …</p>
+            <div class="x-media">
+              <video src="https://video.twimg.com/ext_tw_video/1376953367826599937/pu/vid/640x368/OLmzDUhH3DW8eK1Q.mp4?tag=12" poster="https://pbs.twimg.com/ext_tw_video_thumb/1376953367826599937/pu/img/Zb66-Cd99KHSQnnQ.jpg" autoplay loop muted playsinline></video>
+            </div>
+            <div class="x-meta">5:44 PM · Mar 30, 2021</div>
+            <div class="x-actions"><span>139</span><span>206</span><span>1.1K</span><span>82</span></div>
+          </a>
+          <a class="tweet-card x-post-card" href="https://x.com/JohannKerbrat/status/1651252505270001669?s=20" target="_blank" rel="noreferrer">
+            <div class="x-post-head">
+              <img class="x-avatar" src="https://pbs.twimg.com/profile_images/1419090083202826241/5O7MOPAz_200x200.jpg" alt="" loading="lazy" decoding="async" />
+              <div>
+                <strong>Johann Kerbrat <span class="verified-mark" aria-label="Verified">✓</span><img class="affiliate-badge" src="https://pbs.twimg.com/profile_images/1844399977482813442/1fTlYz2c_200x200.png" alt="Robinhood affiliate badge" loading="lazy" decoding="async" /></strong>
+                <span>@JohannKerbrat</span>
+              </div>
+              <span class="x-menu">...</span>
+            </div>
+            <p><span class="hashtag">#consensus2023</span></p>
+            <div class="x-media">
+              <video src="https://video.twimg.com/tweet_video/FuptZheWcAcAwyh.mp4" poster="https://pbs.twimg.com/tweet_video_thumb/FuptZheWcAcAwyh.jpg" autoplay loop muted playsinline></video>
+            </div>
+            <div class="quoted-post">
+              <div class="quoted-head">
+                <img src="https://pbs.twimg.com/profile_images/1844399977482813442/1fTlYz2c_200x200.png" alt="" loading="lazy" decoding="async" />
+                <strong>Robinhood <span class="verified-mark org" aria-label="Verified organization">✓</span></strong>
+                <span>@RobinhoodApp</span>
+              </div>
+              <p>Our Crypto General Manager @JohannKerbrat will be speaking @consensus2023 tomorrow on April 27th, at 12:20pm CT.</p>
+            </div>
+            <div class="x-meta">3:50 PM · Apr 26, 2023 · 44.6K Views</div>
+            <div class="x-actions"><span>14</span><span>7</span><span>42</span><span>5</span></div>
+          </a>
         </div>
       </section>
 
-      <section class="token-section" id="token">
-        <p class="section-kicker">tokenomics</p>
-        <h2>vibeonomics</h2>
-        <div class="tokenomics-grid">
+      <section class="game-section section-reveal" id="game">
+        <div class="game-copy">
+          <div class="section-kicker">Mini game</div>
+          <h2>tap the vibe.</h2>
+          <p>Hit green beats on timing, skip the red beats, and keep the cat's rhythm alive.</p>
+          <div class="game-stats">
+            <span>Score <strong data-game="score">0</strong></span>
+            <span>Combo <strong data-game="combo">0</strong></span>
+            <span>Vibe <strong data-game="vibe">100</strong>%</span>
+          </div>
+          <button class="button button-primary game-start" type="button">
+            <i data-lucide="play"></i>
+            Start game
+          </button>
+        </div>
+        <div class="game-field rhythm-field" aria-label="VIBE CAT rhythm game" tabindex="0">
+          <div class="rhythm-lanes" aria-hidden="true">
+            <span data-lane="0"></span>
+            <span data-lane="1"></span>
+            <span data-lane="2"></span>
+            <span data-lane="3"></span>
+          </div>
+          <div class="hit-zone" aria-label="Rhythm lanes">
+            <button type="button" data-lane-button="0">D</button>
+            <button type="button" data-lane-button="1">F</button>
+            <button type="button" data-lane-button="2">J</button>
+            <button type="button" data-lane-button="3">K</button>
+          </div>
+          <img class="game-cat" src="assets/vibecat.gif" alt="VIBE CAT player" loading="lazy" decoding="async" />
+          <div class="game-message">press start</div>
+        </div>
+      </section>
+
+      <section class="live-section section-reveal" id="live">
+        <div class="terminal-topline">
+          <div>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+          </div>
+          <strong>VIBE_TERMINAL</strong>
+          <small>Robinhood Chain</small>
+        </div>
+        <div class="live-head">
+          <h2>green candle command center.</h2>
+        </div>
+
+        <div class="live-grid">
+          <article class="price-card">
+            <span>Price</span>
+            <strong data-live="price">syncing</strong>
+            <small data-live="change">24h change --</small>
+          </article>
           <article>
+            <span>Market cap</span>
+            <strong data-live="market-cap">--</strong>
+          </article>
+          <article>
+            <span>Liquidity</span>
+            <strong data-live="liquidity">--</strong>
+          </article>
+          <article>
+            <span>24h volume</span>
+            <strong data-live="volume">--</strong>
+          </article>
+          <article>
+            <span>24h trades</span>
+            <strong data-live="txns">--</strong>
+          </article>
+          <article>
+            <span>Holders</span>
+            <strong data-live="holders">syncing</strong>
+          </article>
+        </div>
+
+        <div class="chart-shell">
+          <div class="chart-top">
+            <span>Dexscreener live chart</span>
+            <small>Live</small>
+          </div>
+          <iframe
+            title="VIBE CAT live Dexscreener chart"
+            data-src="https://dexscreener.com/robinhood/0x2d71816d8c5017524051f9b7ccf4ed0eae620383?embed=1&theme=dark"
+            src="about:blank"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="info-section section-reveal">
+        <div class="section-kicker">Token facts</div>
+        <h2>meme first. information visible.</h2>
+        <div class="fact-grid">
+          <article>
+            <span>Supply</span>
             <strong>1B</strong>
-            <span>total supply</span>
-            <p>one billion vibes. no extra cats hiding under the couch.</p>
+            <p>Fixed total supply.</p>
           </article>
           <article>
+            <span>Tax</span>
             <strong>0 / 0</strong>
-            <span>tax</span>
-            <p>the cat is here to vibe, not collect tolls.</p>
+            <p>No buy or sell tax.</p>
           </article>
           <article>
+            <span>Pool</span>
             <strong>100%</strong>
-            <span>in pool</span>
-            <p>built for the market, the meme, and the timeline.</p>
+            <p>Liquidity positioned for market access.</p>
+          </article>
+          <article>
+            <span>Chain</span>
+            <strong>RH</strong>
+            <p>Built on Robinhood Chain.</p>
           </article>
         </div>
       </section>
 
-      <section class="final-section">
-        <img src="assets/internet-vibing-meme.gif" alt="Cat vibing meme variation" />
-        <p>just vibe.</p>
+      <section class="final-section section-reveal">
+        <img src="assets/vibegif.gif" alt="VIBE CAT" loading="lazy" decoding="async" />
+        <div>
+          <div class="section-kicker">Vibe check</div>
+          <h2>Vlad knows the cat. crypto knows the vibe.</h2>
+          <div class="hero-actions final-actions">
+            <a class="button button-primary" href="https://app.uniswap.org/swap?outputCurrency=0x2355431b83b1a8e40172d099d90243d8d666b56b&chain=robinhood" target="_blank" rel="noreferrer">
+              <i data-lucide="shopping-bag"></i>
+              Buy
+            </a>
+            <a class="button" href="https://x.com/i/communities/1870217988248613079" target="_blank" rel="noreferrer">
+              <i data-lucide="users"></i>
+              Community
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>$VIBE CAT</span>
-      <span>positive vibes on robinhood chain.</span>
+      <span>Robinhood Chain</span>
+      <span>0x2355...b56b</span>
     </footer>
 
-    <div class="toast" role="status" aria-live="polite">contract copied</div>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="toast" role="status" aria-live="polite">copied</div>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="script.js"></script>
   </body>
