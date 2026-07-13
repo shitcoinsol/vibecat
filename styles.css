@@ -145,10 +145,12 @@ img {
   background: linear-gradient(90deg, var(--green), var(--green-2));
   transform: scaleX(0);
   transform-origin: left;
+  transition: none;
 }
 
 .loader.is-loading .loader-bar span {
-  animation: load-progress 1900ms cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  transform: scaleX(1);
+  transition: transform 2100ms cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .loader.is-done {

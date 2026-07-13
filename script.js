@@ -12,17 +12,30 @@ const liveFields = document.querySelectorAll("[data-live]");
 const loader = document.querySelector(".loader");
 
 if (loader) {
-  requestAnimationFrame(() => {
-    loader.classList.add("is-loading");
-  });
+  const loaderBar = loader.querySelector(".loader-bar span");
+  if (loaderBar) {
+    loaderBar.style.transition = "none";
+    loaderBar.style.transform = "scaleX(0)";
+    loaderBar.getBoundingClientRect();
+  }
+
+  window.setTimeout(() => {
+    requestAnimationFrame(() => {
+      if (loaderBar) {
+        loaderBar.style.transition = "";
+        loaderBar.style.transform = "";
+      }
+      loader.classList.add("is-loading");
+    });
+  }, 420);
 
   window.setTimeout(() => {
     loader.classList.add("is-done");
-  }, 2200);
+  }, 2850);
 
   window.setTimeout(() => {
     loader.remove();
-  }, 2950);
+  }, 3550);
 }
 
 function showToast(message) {
