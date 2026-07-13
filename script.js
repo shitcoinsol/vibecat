@@ -11,9 +11,19 @@ const tiltTargets = document.querySelectorAll("[data-tilt]");
 const liveFields = document.querySelectorAll("[data-live]");
 const loader = document.querySelector(".loader");
 
-window.setTimeout(() => {
-  if (loader) loader.remove();
-}, 2800);
+if (loader) {
+  requestAnimationFrame(() => {
+    loader.classList.add("is-loading");
+  });
+
+  window.setTimeout(() => {
+    loader.classList.add("is-done");
+  }, 2200);
+
+  window.setTimeout(() => {
+    loader.remove();
+  }, 2950);
+}
 
 function showToast(message) {
   if (!toast) return;
